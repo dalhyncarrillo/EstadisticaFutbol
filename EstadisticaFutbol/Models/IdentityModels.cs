@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using EstadisticaFutbol.EntityConfigurations;
 
 namespace EstadisticaFutbol.Models
 {
@@ -20,6 +21,7 @@ namespace EstadisticaFutbol.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Campeonato> Campeonatos { get; set; }
 
         public ApplicationDbContext()
             : base("OracleDbContext", throwIfV1Schema: false)
@@ -30,6 +32,7 @@ namespace EstadisticaFutbol.Models
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultSchema("ADMINISTRADOR");
+            modelBuilder.Configurations.Add(new CampeonatoConfiguracion());
         }
 
         public static ApplicationDbContext Create()

@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="EntityConfigurations\CampeonatoConfiguracion.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -205,7 +206,12 @@
     <Compile Include="Migrations\201706220048309_CreacionDeTablasAspNetIdentity.Designer.cs">
       <DependentUpon>201706220048309_CreacionDeTablasAspNetIdentity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706220115121_AgregarTablaCampeonatos.cs" />
+    <Compile Include="Migrations\201706220115121_AgregarTablaCampeonatos.Designer.cs">
+      <DependentUpon>201706220115121_AgregarTablaCampeonatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Campeonato.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
@@ -292,6 +298,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706220048309_CreacionDeTablasAspNetIdentity.resx">
       <DependentUpon>201706220048309_CreacionDeTablasAspNetIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706220115121_AgregarTablaCampeonatos.resx">
+      <DependentUpon>201706220115121_AgregarTablaCampeonatos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
